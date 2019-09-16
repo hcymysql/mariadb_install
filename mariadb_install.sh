@@ -28,7 +28,7 @@ do
 	fi
 done
 
-/usr/local/mysql/bin/mysql -h127.0.0.1 -u"repl" -p"sysrepl" -P"$master_port" -e "CHANGE MASTER TO MASTER_HOST='$master_ip',MASTER_USER='repl',MASTER_PASSWORD='sysrepl',MASTER_PORT=$master_port,master_use_gtid = current_pos;START SLAVE;"
+/usr/local/mysql/bin/mysql -h127.0.0.1 -u"admin" -p"hechunyang" -P"$master_port" -e "CHANGE MASTER TO MASTER_HOST='$master_ip',MASTER_USER='repl',MASTER_PASSWORD='sysrepl',MASTER_PORT=$master_port,master_use_gtid = current_pos;START SLAVE;"
 
 	echo "MySQL主从复制同步已经初始化完毕。"
 	exit 0
