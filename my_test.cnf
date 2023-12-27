@@ -26,6 +26,7 @@ extra_max_connections = 100
 ###skip-networking
 default-storage-engine = INNODB
 character-set-server = utf8
+init_connect = 'set global character_set_database = "utf8"'
 wait_timeout  =  3600
 connect_timeout  =  20
 interactive_timeout  =  3600
